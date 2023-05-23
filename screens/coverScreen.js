@@ -77,7 +77,7 @@ export const paintCoverScreen = (jsonResData, typeOfURL) => {
 </div>
   <form id="linkForm">
   <div class="before:absolute before:content-[''] before:bg-[#C6C6C6] before:h-[1px] before:w-full before:top-[calc(100%+8px)] before:left-0 relative">
-  <input id="linkInput" type="text" placeholder="find another cover..." class="text-[16px] font-light text-red-595959 placeholder:text-[#595959] font-inter caret-[#1DB954] w-full outline-none resize-none overflow-hidden h-full" />
+  <input id="linkInput" type="text" placeholder="find another cover..." class="text-[16px] font-light text-red-595959 placeholder:text-[#595959] font-inter caret-[#1DB954] w-[calc(100%-135px)] outline-none resize-none overflow-hidden h-full" />
   <button id="pressEnterButton" class="flex flex-row hidden absolute right-0 bottom-[1px] font-inter bg-white pl-4" id="enterButton"><span class="text-[#595959] font-inter">press</span><span class="font-semibold text-[#1DB954] ml-1 font-inter">Enter↵</span></button>
   </div>
   </form></div></div>
