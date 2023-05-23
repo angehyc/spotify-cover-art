@@ -13,12 +13,65 @@
   </head>
   <body>
     <div id="actualBody" class="h-screen">
-      <input
-        type="text"
-        name=""
-        id="linkInput"
-        value="https://open.spotify.com/track/4EYiIACD4vGzOmiKYzRdkW?si=0fe76e3627d9406b"
-      />
+      <nav class="h-[168px] bg-white">
+        <img
+          id="logo"
+          class="cursor-pointer px-[80px] pt-[60px]"
+          src="/square.png"
+          alt=""
+        />
+      </nav>
+      <div class="px-[80px]">
+        <h1 class="mb-[24px] font-inter text-2xl font-semibold text-[#343434]">
+          get <span class="text-[#1DB954]">spotify</span> cover art in high res
+        </h1>
+        <div class="font-inter text-[18px] leading-[1.5] text-[#343434]">
+          <p>
+            1. navigate to the
+            <span
+              id="borderStroke"
+              class="ml-[2px] mr-[12px] border border-dashed border-[#1DB954] px-1"
+              >album</span
+            ><span class="mr-[12px] border border-dashed border-[#1DB954] px-1"
+              >artist</span
+            ><span class="mr-[12px] border border-dashed border-[#1DB954] px-1"
+              >track</span
+            ><span class="mr-[12px] border border-dashed border-[#1DB954] px-1"
+              >podcast</span
+            ><span class="mr-[2px] border border-dashed border-[#1DB954] px-1"
+              >podcast episode</span
+            >
+            you want
+          </p>
+          <p>2. get its link by...</p>
+          <p class="pl-4">
+            <span class="font-medium">a. spotify browser: </span>copy the URL
+          </p>
+          <p class="pl-4">
+            <span class="font-medium">b. spotify desktop app:</span> right click
+            title > share > copy link
+          </p>
+          <p>3. paste link below and press enter</p>
+        </div>
+        <form id="linkForm" class="mt-[73px]">
+          <textarea
+            autofocus
+            rows="4"
+            id="linkInput"
+            type="text"
+            class="h-full w-full resize-none overflow-hidden font-inter text-[72px] font-light leading-[1.2] text-[#E4E4E4] caret-[#1DB954] outline-none placeholder:text-[#E4E4E4]"
+            placeholder="paste link and enter"
+          ></textarea>
+        </form>
+      </div>
+      <footer
+        class="absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center text-center font-inter text-[12px] text-[#C7C7C7]"
+      >
+        born from my ♥ of browsing spotify cover art // need help?
+        <span id="handle" class="ml-1 cursor-pointer hover:text-[#1DB954]">
+          @angehyc</span
+        >
+      </footer>
     </div>
     <script type="module" src="/main.js"></script>
   </body>

@@ -43,7 +43,11 @@ export const paintCoverScreen = (jsonResData, typeOfURL) => {
   const body = document.querySelector("#actualBody");
   const imageSource = jsonResData.album
     ? jsonResData.album.images[0].url
-    : jsonResData.images[0].url;
+      ? jsonResData.album.images[0].url
+      : "/Frame_58.png"
+    : jsonResData.images[0]?.url
+    ? jsonResData.images[0].url
+    : "/Frame_58.png";
 
   body.innerHTML = /*html*/ `
 

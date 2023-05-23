@@ -10,9 +10,9 @@ const errorScreen =
   <div class="px-[80px]">
   <h1 class="font-inter text-[#343434] font-semibold text-2xl mb-[24px]">that link didn't work, check that...</h1>
   <div class ="font-inter text-[18px] leading-[1.5] text-[#343434]">
-  <p>1. you’ve copied and pasted the entire URL</p>
-  <p>2. you're copying an album/artist/track/podcast/podcast episode </p>
-  <p>3. the link format starts with <span class="italic">“https://open.spotify.com/”</span></p>
+  <p>▪ you’ve copied and pasted the entire URL</p>
+  <p>▪ you're copying an album/artist/track/podcast/podcast episode </p>
+  <p>▪ the link format starts with <span class="italic">“https://open.spotify.com/”</span></p>
   </div>
   <form id="linkForm" class="mt-[73px]">
   <textarea autofocus rows="4" id="linkInput" type="text" class="leading-[1.2] text-[72px] font-light text-[#E4E4E4] placeholder:text-[#E4E4E4] font-inter caret-[#1DB954] w-full outline-none resize-none overflow-hidden h-full" placeholder="paste link again"></textarea>
