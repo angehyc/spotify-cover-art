@@ -7,9 +7,9 @@ import { paintStartScreen } from "./startScreen";
 
 const date = (jsonResData, typeOfURL) => {
   if (typeOfURL === "albums") {
-    return jsonResData.release_date.split("-")[0];
+    return `(${jsonResData.release_date.split("-")[0]})`;
   } else if (typeOfURL === "tracks") {
-    return jsonResData.album.release_date.split("-")[0];
+    return `(${jsonResData.album.release_date.split("-")[0]})`;
   } else if (typeOfURL === "artists") {
     return "";
   } else if (typeOfURL === "shows") {
@@ -17,7 +17,7 @@ const date = (jsonResData, typeOfURL) => {
   } else if (typeOfURL === "playlists") {
     return "";
   } else if (typeOfURL === "episodes") {
-    return jsonResData.release_date.split("-")[0];
+    return `(${jsonResData.release_date.split("-")[0]})`;
   }
 };
 
@@ -29,7 +29,7 @@ const artistName = (data, typeOfURL) => {
   } else if (typeOfURL === "episodes") {
     return data.show.name;
   } else if (typeOfURL === "playlists") {
-    return data.owner;
+    return data.owner.display_name;
   } else if (typeOfURL === "albums" || typeOfURL === "tracks") {
     let allArtists = data.artists.map((artist) => {
       return artist.name;
@@ -62,7 +62,7 @@ export const paintCoverScreen = (jsonResData, typeOfURL) => {
   by ${artistName(jsonResData, typeOfURL)}</span> ▪ <span id="type" class="">${
     typeOfURL.slice(0, 1).toUpperCase() +
     typeOfURL.slice(1, typeOfURL.length - 1)
-  }</span> <span>(${date(jsonResData, typeOfURL)})</span></div>
+  }</span> <span>${date(jsonResData, typeOfURL)}</span></div>
 
   </span>
 
