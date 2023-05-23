@@ -15,7 +15,7 @@ const startScreen =
     <p>2. get its link by...</p>
       <p class="pl-4"><span class="font-medium">a. spotify browser: </span>copy the URL</p>
       <p class="pl-4"><span class="font-medium">b. spotify desktop app:</span> right click title > share > copy link</p>
-    <p>3. paste link below and press enter</p>
+    <p>3. paste link below</p>
   </div>
   <form id="linkForm" class="mt-[73px]">
 
