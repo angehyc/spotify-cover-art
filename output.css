@@ -874,8 +874,16 @@ video {
   width: 320px;
 }
 
+.w-\[calc\(100\%-135px\)\] {
+  width: calc(100% - 135px);
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-\[calc\(100\%-118px\)\] {
+  width: calc(100% - 118px);
 }
 
 .max-w-\[700px\] {
