@@ -46,11 +46,7 @@ export const submitLink = (event) => {
 
   const inputType = getInputType(linkInput.value);
 
-  fetch(
-    `http://localhost:3000/api/apee?inputType=${inputType}&id=${getID(
-      linkInput.value
-    )}`
-  )
+  fetch(`/api/apee?inputType=${inputType}&id=${getID(linkInput.value)}`)
     .then((res) => {
       console.log(res);
       if (res.status !== 200) {
