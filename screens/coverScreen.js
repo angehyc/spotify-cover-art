@@ -50,7 +50,7 @@ export const paintCoverScreen = (jsonResData, typeOfURL) => {
     : "/Frame_58.png";
 
   body.innerHTML = /*html*/ `
-
+  <div class="max-w-[1440px] mx-auto">
   <nav class="h-[168px] bg-white">
   <img id="logo" class="cursor-pointer px-[80px] pt-[60px]" src="/square.png" alt="" /></nav>
   <div id="mainSection" class="px-[80px] mt-[8px] max-w-full w-full flex flex-col sm:grid grid-cols-[minmax(240px,640px)_minmax(517px,700px)] sm:gap-x-[62px] place-items-center justify-items-start ">
@@ -82,7 +82,7 @@ export const paintCoverScreen = (jsonResData, typeOfURL) => {
   </div>
   </form></div></div>
   <footer class="flex items-center font-inter absolute bottom-5 text-[#C7C7C7] text-[12px] left-1/2 -translate-x-1/2 text-center">born from my ♥ of browsing spotify cover art // need help? <span id="handle" class="hover:text-[#1DB954] cursor-pointer ml-1"> @angehyc</span></footer>
-  `;
+  </div>`;
 
   const handleLink = document.querySelector("#handle");
   handleLink.addEventListener("click", () => {

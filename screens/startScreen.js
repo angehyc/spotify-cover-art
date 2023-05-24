@@ -4,6 +4,7 @@ import { submitLink } from "../help/submitLink";
 const startScreen =
   /*html*/
   `
+  <div class="max-w-[1440px] mx-auto">
   <nav class="h-[168px] bg-white">
   <img id="logo" class="cursor-pointer px-[80px] pt-[60px]" src="/square.png" alt="" /></nav>
   <div class="px-[80px]">
@@ -22,7 +23,7 @@ const startScreen =
   <textarea autofocus rows="4" id="linkInput" type="text" class="leading-[1.2] text-[72px] font-light text-[#E4E4E4] placeholder:text-[#E4E4E4] font-inter caret-[#1DB954] w-full outline-none resize-none overflow-hidden h-full" placeholder="paste link and enter"></textarea>
 </form>
 </div>
-<footer class="flex items-center font-inter absolute bottom-5 text-[#C7C7C7] text-[12px] left-1/2 -translate-x-1/2 text-center">born from my ♥ of browsing spotify cover art // need help? <span id="handle" class="hover:text-[#1DB954] cursor-pointer ml-1"> @angehyc</span></footer>`;
+<footer class="flex items-center font-inter absolute bottom-5 text-[#C7C7C7] text-[12px] left-1/2 -translate-x-1/2 text-center">born from my ♥ of browsing spotify cover art // need help? <span id="handle" class="hover:text-[#1DB954] cursor-pointer ml-1"> @angehyc</span></footer></div>`;
 
 export const paintStartScreen = () => {
   //paint UI
