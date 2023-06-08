@@ -32,11 +32,13 @@ export const paintStartScreen = () => {
 
   //add event listeners
   const handleLink = document.querySelector("#handle");
+
   handleLink.addEventListener("click", () => {
     window.open("https://twitter.com/angehyc", "_blank");
   });
 
   const homepage = document.querySelector("#logo");
+
   homepage.addEventListener("click", paintStartScreen);
 
   const linkForm = document.querySelector("#linkForm");
