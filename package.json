@@ -15,6 +15,7 @@
     "vite": "^4.3.2"
   },
   "dependencies": {
-    "node-fetch": "^3.3.1"
+    "node-fetch": "^3.3.1",
+    "posthog-js": "^1.154.2"
   }
 }
