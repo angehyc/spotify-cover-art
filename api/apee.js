@@ -26,6 +26,8 @@ export default async function (req, res) {
   );
 
   const result = await response.json();
+  
+  // Get the main playlist/album/track data
   const theResponse = await fetch(
     `https://api.spotify.com/v1/${req.query.inputType}/${req.query.id}?market=US`,
     {
@@ -40,6 +42,23 @@ export default async function (req, res) {
   }
 
   const data = await theResponse.json();
+
+  // If it's a playlist, get all tracks
+  if (req.query.inputType === "playlists") {
+    const tracksResponse = await fetch(
+      `https://api.spotify.com/v1/playlists/${req.query.id}/tracks?market=US`,
+      {
+        headers: {
+          Authorization: `Bearer ${result.access_token}`,
+        },
+      }
+    );
+    
+    if (tracksResponse.status === 200) {
+      const tracksData = await tracksResponse.json();
+      data.tracks = tracksData.items;
+    }
+  }
 
   res.status(200).json(data);
 }

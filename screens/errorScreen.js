@@ -12,7 +12,7 @@ const errorScreen =
   <h1 class="font-inter text-[#343434] font-semibold text-2xl mb-[24px]">that link didn't work, check that...</h1>
   <div class ="font-inter text-[18px] leading-[1.5] text-[#343434]">
   <p>▪ you’ve copied and pasted the entire URL</p>
-  <p>▪ you're copying an album/artist/track/podcast/podcast episode </p>
+  <p>▪ you're copying an album/artist/track/podcast/playlist/podcast episode </p>
   <p>▪ the link format starts with <span class="italic">“https://open.spotify.com/”</span></p>
   </div>
   <form id="linkForm" class="mt-[73px]">

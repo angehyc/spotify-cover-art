@@ -1,5 +1,6 @@
 import { paintCoverScreen } from "../screens/coverScreen";
 import { paintErrorScreen } from "../screens/errorScreen";
+import { API_BASE_URL } from "../config/api.js";
 
 export const getInputType = (userInput) => {
   if (userInput.includes("album")) {
@@ -46,7 +47,11 @@ export const submitLink = (event) => {
 
   const inputType = getInputType(linkInput.value);
 
-  fetch(`/api/apee?inputType=${inputType}&id=${getID(linkInput.value)}`)
+  fetch(
+    `${API_BASE_URL}/api/apee?inputType=${inputType}&id=${getID(
+      linkInput.value
+    )}`
+  )
     .then((res) => {
       console.log(res);
       if (res.status !== 200) {
