@@ -45,19 +45,33 @@ export default async function (req, res) {
 
   // If it's a playlist, get all tracks
   if (req.query.inputType === "playlists") {
-    const tracksResponse = await fetch(
-      `https://api.spotify.com/v1/playlists/${req.query.id}/tracks?market=US`,
-      {
+    // Initialize array to hold all tracks
+    let allTracks = [];
+    
+    // Get initial tracks URL
+    let nextURL = `https://api.spotify.com/v1/playlists/${req.query.id}/tracks?market=US`;
+    
+    // Keep fetching while there are more tracks
+    while (nextURL) {
+      const tracksResponse = await fetch(nextURL, {
         headers: {
           Authorization: `Bearer ${result.access_token}`,
         },
+      });
+      
+      if (tracksResponse.status === 200) {
+        const tracksData = await tracksResponse.json();
+        // Add current batch of tracks to our array
+        allTracks = [...allTracks, ...tracksData.items];
+        // Update nextURL - will be null when there are no more tracks
+        nextURL = tracksData.next;
+      } else {
+        break; // Exit loop if we get an error
       }
-    );
-    
-    if (tracksResponse.status === 200) {
-      const tracksData = await tracksResponse.json();
-      data.tracks = tracksData.items;
     }
+    
+    // Add all tracks to the response data
+    data.tracks = allTracks;
   }
 
   res.status(200).json(data);
