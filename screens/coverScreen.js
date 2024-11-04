@@ -95,7 +95,7 @@ export const paintCoverScreen = (jsonResData, typeOfURL) => {
             </span>
 
             <div class="flex gap-6 mt-[40px]">
-              <button id="downloadButton" class="w-[320px] border-solid border border-[#343434] bg-[#343434] text-[#FFF] py-4 px-6 font-inter text-[18px]">download ${typeOfURL !== "playlists" ? "" : "main image only"}</button>
+              <button id="downloadButton" class="w-[320px] border-solid border border-[#343434] bg-[#343434] text-[#FFF] py-4 px-6 font-inter text-[18px]">download ${typeOfURL !== "playlists" ? "" : "playlist cover only"}</button>
               ${
                 typeOfURL === "playlists"
                   ? `
