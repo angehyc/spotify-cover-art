@@ -46,14 +46,16 @@ export const submitLink = (event) => {
   };
 
   const inputType = getInputType(linkInput.value);
-
+  console.log("inputType",inputType);
+  console.log("getID",getID(linkInput.value));
+  console.log("API_BASE_URL",API_BASE_URL);
   fetch(
     `${API_BASE_URL}/api/apee?inputType=${inputType}&id=${getID(
       linkInput.value
     )}`
   )
     .then((res) => {
-      console.log(res);
+      console.log("result",res);
       if (res.status !== 200) {
         throw new Error("hehe");
       } else {
@@ -61,7 +63,7 @@ export const submitLink = (event) => {
       }
     })
     .then((jsonResData) => {
-      console.log(jsonResData);
+      console.log("jsonResData",jsonResData);
       paintCoverScreen(jsonResData, inputType);
     })
 
